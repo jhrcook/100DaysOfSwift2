@@ -20,6 +20,20 @@ I will then follow the [100 Days of SwiftUI](https://www.hackingwithswift.com/10
 Finally, I will pursue additional tutorials to fill in the gaps, such as testing and using instruments effectively.
 
 
+### Tutorials to do:
+
+1. Hacking with Swift - [Project 9: Grand Central Dispatch](https://www.hackingwithswift.com/read/9/overview)
+2. Hacking with Swift - [Project 12: UserDefaults](https://www.hackingwithswift.com/read/12/overview)
+3. Hacking with Swift - [Project 15: Animation](https://www.hackingwithswift.com/read/15/overview)
+4. Hacking with Swift - [Project 21: Local Notifications](https://www.hackingwithswift.com/read/21/overview)
+5. Hacking with Swift - [Project 30: Instruments](https://www.hackingwithswift.com/read/30/overview)
+6. Hacking with Swift - [Project 32: SwiftSearcher](https://www.hackingwithswift.com/read/32/overview)
+7. Hacking with Swift - [Project 38: GitHub Commits](https://www.hackingwithswift.com/read/38/overview)
+8. Hacking with Swift - [Project 39: Unit testing with XCTest](https://www.hackingwithswift.com/read/39/overview)
+9. [100 Days of Swift UI](https://www.hackingwithswift.com/100/swiftui)
+10. 
+
+
 ## Progress
 
 I'm just getting started!
@@ -28,3 +42,5 @@ I'm just getting started!
 ## Log
 
 
+**Day 1 - March 20, 2020:**
+I got a refresher on Grand Central Dispatch from Hacking with Swift.
