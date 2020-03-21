@@ -5,8 +5,8 @@
 [![jhc twitter](https://img.shields.io/badge/Twitter-@JoshDoesA-00aced.svg?style=flat&logo=twitter)](https://twitter.com/JoshDoesa)
 [![jhc website](https://img.shields.io/badge/Website-Joshua_Cook-5087B2.svg?style=flat&logo=telegram)](https://joshuacook.netlify.com)
 
-**Start Date: March 19, 2020  
-End Date: June 27, 2020**
+**Start Date: March 20, 2020  
+End Date: June 28, 2020**
 
 
 ## Plan
@@ -44,3 +44,6 @@ I'm just getting started!
 
 **Day 1 - March 20, 2020:**
 I got a refresher on Grand Central Dispatch from Hacking with Swift.
+
+**Day 2 - March 21, 2020:**
+A good refresher on using UserDefaults and Codable from Hacking with Swift.
