@@ -47,3 +47,6 @@ I got a refresher on Grand Central Dispatch from Hacking with Swift.
 
 **Day 2 - March 21, 2020:**
 A good refresher on using UserDefaults and Codable from Hacking with Swift.
+
+**Day 3 - March 22, 2020:**
+I reviewed Project 15 on Animation from Hacking with Swift.
