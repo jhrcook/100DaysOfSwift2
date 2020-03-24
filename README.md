@@ -31,7 +31,9 @@ Finally, I will pursue additional tutorials to fill in the gaps, such as testing
 7. Hacking with Swift - [Project 38: GitHub Commits](https://www.hackingwithswift.com/read/38/overview)
 8. Hacking with Swift - [Project 39: Unit testing with XCTest](https://www.hackingwithswift.com/read/39/overview)
 9. [100 Days of Swift UI](https://www.hackingwithswift.com/100/swiftui)
-10. 
+10. Swift Package Manager
+11. SwiftLint
+12. Documentation with Swift markdown and Jazzy
 
 
 ## Progress
@@ -50,3 +52,6 @@ A good refresher on using UserDefaults and Codable from Hacking with Swift.
 
 **Day 3 - March 22, 2020:**
 I reviewed Project 15 on Animation from Hacking with Swift.
+
+**Day 4 - March 23, 2020:**
+A good refresher on local notifications from HAcking with Swift.
