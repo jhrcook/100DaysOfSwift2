@@ -55,3 +55,7 @@ I reviewed Project 15 on Animation from Hacking with Swift.
 
 **Day 4 - March 23, 2020:**
 A good refresher on local notifications from HAcking with Swift.
+
+**Day 5 - March 25, 2020:**
+I began working on the GitHub Commmits project to learn about CoreData.
+I didn't finish it (it is dense), but pasued at 'Time for some useful code' on page 4 of the tutorial.
