@@ -63,3 +63,6 @@ I didn't finish it (it is dense), but pasued at 'Time for some useful code' on p
 **Day 6 - March 26, 2020:**
 I learned even more about CoreData as I continue through the Hacking with Swift project.
 I'm taking my time and making sure I understand each step because I would really like to use it in my app.
+
+**Day 7 - March 30, 2020:**
+I finished the CoreDate tutorial from Hacking with Swift and am planning to do a prototype app to further practice using CoreData.

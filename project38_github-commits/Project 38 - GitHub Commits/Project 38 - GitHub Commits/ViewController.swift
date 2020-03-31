@@ -15,15 +15,19 @@ class ViewController: UITableViewController {
     
     var commits = [Commit]()
     
+    var commitPredicate: NSPredicate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        print("Loading the view controller...")
-                
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(changeFilter))
+        
         container = NSPersistentContainer(name: "project38")
         
         container.loadPersistentStores { (storeDescription, error) in
+            self.container.viewContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+            
             if let error = error {
                 print("Unresolved error \(error)")
             }
@@ -106,6 +110,7 @@ class ViewController: UITableViewController {
         // Add in a sorter.
         let sort = NSSortDescriptor(key: "date", ascending: false)
         request.sortDescriptors = [sort]
+        request.predicate = commitPredicate
         
         // Make the request from the container.
         do {
@@ -115,6 +120,41 @@ class ViewController: UITableViewController {
         } catch {
             print("Fetch failed.")
         }
+    }
+    
+    
+    /// Opens an action sheet for the user to select a filter.
+    @objc func changeFilter() {
+        let ac = UIAlertController(title: "Filter commits...", message: nil, preferredStyle: .actionSheet)
+        
+        // Filter by "fix" in message.
+        ac.addAction(UIAlertAction(title: "Show only fixes", style: .default) { [unowned self] _ in
+            self.commitPredicate = NSPredicate(format: "message CONTAINS[c] 'fix'")
+            self.loadSavedData()
+        })
+        
+        // Filter out PRs.
+        ac.addAction(UIAlertAction(title: "Ignore PRs", style: .default) { [unowned self] _ in
+            self.commitPredicate = NSPredicate(format: "NOT message BEGINSWITH 'Merge pull request'")
+            self.loadSavedData()
+        })
+        
+        // Get only most recent (half a day) commits.
+        ac.addAction(UIAlertAction(title: "Most recent", style: .default) { [unowned self] _ in
+            let twelveHoursAgo = Date().addingTimeInterval(-43200)
+            self.commitPredicate = NSPredicate(format: "date < %@", twelveHoursAgo as NSDate)
+            self.loadSavedData()
+        })
+        
+        // Show all commits.
+        ac.addAction(UIAlertAction(title: "Show all commits", style: .default) { [unowned self] _ in
+            self.commitPredicate = nil
+            self.loadSavedData()
+        })
+        
+        
+        ac.addAction(UIAlertAction(title: "Cancer", style: .cancel))
+        present(ac, animated: true)
     }
 
 }

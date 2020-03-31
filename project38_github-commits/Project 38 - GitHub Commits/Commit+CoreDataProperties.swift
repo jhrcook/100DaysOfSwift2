@@ -2,7 +2,7 @@
 //  Commit+CoreDataProperties.swift
 //  Project 38 - GitHub Commits
 //
-//  Created by Joshua on 3/25/20.
+//  Created by Joshua on 3/28/20.
 //  Copyright © 2020 Joshua Cook. All rights reserved.
 //
 //
@@ -21,5 +21,6 @@ extension Commit {
     @NSManaged public var message: String
     @NSManaged public var sha: String
     @NSManaged public var url: String
+    @NSManaged public var author: Author
 
 }
