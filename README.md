@@ -71,3 +71,6 @@ I finished the CoreDate tutorial from Hacking with Swift and am planning to do a
 I began work on my CoreData demo app.
 It is at the repository jhrcook/CoreDataDemo2.
 I am walkign through Apple's guides and haven't gotten lost (yet).
+
+**Day 9 - April 01, 2020:**
+I have CoreData up and running! I need to do some adjusting to the UI before going much further, but I am feeling confident.
