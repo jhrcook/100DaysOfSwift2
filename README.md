@@ -74,3 +74,6 @@ I am walkign through Apple's guides and haven't gotten lost (yet).
 
 **Day 9 - April 01, 2020:**
 I have CoreData up and running! I need to do some adjusting to the UI before going much further, but I am feeling confident.
+
+**Day 10 - April 03, 2020:**
+I started the second round of the CoreData demo which introduces relationships between multiple entities.
