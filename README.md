@@ -77,3 +77,8 @@ I have CoreData up and running! I need to do some adjusting to the UI before goi
 
 **Day 10 - April 03, 2020:**
 I started the second round of the CoreData demo which introduces relationships between multiple entities.
+
+**Day 11 - April 05, 2020:**
+I am still working on the CoreData demo app, but I think I am almost done.
+I was able to add a feature that I though was going to be rather complicated, but it turned out to be very simple.
+I think I am getting the hang of it.
