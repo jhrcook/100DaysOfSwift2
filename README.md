@@ -82,3 +82,8 @@ I started the second round of the CoreData demo which introduces relationships b
 I am still working on the CoreData demo app, but I think I am almost done.
 I was able to add a feature that I though was going to be rather complicated, but it turned out to be very simple.
 I think I am getting the hang of it.
+
+**Day 12 - April 06, 2020:**
+I have moved on from the CoreData demo because I think I covered the topics I wanted to.
+I have begun the 100 Days of SwiftUI from Paul Hudson and completed the first day.
+It's such a weird paradigm and is completely different from UIKit.
