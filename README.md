@@ -87,3 +87,6 @@ I think I am getting the hang of it.
 I have moved on from the CoreData demo because I think I covered the topics I wanted to.
 I have begun the 100 Days of SwiftUI from Paul Hudson and completed the first day.
 It's such a weird paradigm and is completely different from UIKit.
+
+**Day 13 - April 07, 2020:**
+I finished day 17 of 100 Days of SwiftUI and we learned about adding more UI controls including text fields, pickers, and segmented controllers.
