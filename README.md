@@ -90,3 +90,6 @@ It's such a weird paradigm and is completely different from UIKit.
 
 **Day 13 - April 07, 2020:**
 I finished day 17 of 100 Days of SwiftUI and we learned about adding more UI controls including text fields, pickers, and segmented controllers.
+
+**Day 14 - April 08, 2020:**
+I completed the first challenge and built a unit converting app that converts temperatures.
