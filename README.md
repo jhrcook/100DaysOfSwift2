@@ -93,3 +93,9 @@ I finished day 17 of 100 Days of SwiftUI and we learned about adding more UI con
 
 **Day 14 - April 08, 2020:**
 I completed the first challenge and built a unit converting app that converts temperatures.
+
+**Day 15 - April 09, 2020:**
+I began project 2 of Hacking SwiftUI.
+We went ove a few more common views such as the Stacks, buttons, images, colors, and gradients.
+SwiftUI makes so many things so simple, but I'm afraid it will make other things incredibly difficult.
+I'm optmistic though.
