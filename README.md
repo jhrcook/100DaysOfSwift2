@@ -6,7 +6,7 @@
 [![jhc website](https://img.shields.io/badge/Website-Joshua_Cook-5087B2.svg?style=flat&logo=telegram)](https://joshuacook.netlify.com)
 
 **Start Date: March 20, 2020  
-End Date: June 28, 2020**
+End Date: June 28, 2020** (incorrect, sorry)
 
 
 ## Plan
@@ -54,7 +54,7 @@ A good refresher on using UserDefaults and Codable from Hacking with Swift.
 I reviewed Project 15 on Animation from Hacking with Swift.
 
 **Day 4 - March 23, 2020:**
-A good refresher on local notifications from HAcking with Swift.
+A good refresher on local notifications from Hscking with Swift.
 
 **Day 5 - March 25, 2020:**
 I began working on the GitHub Commmits project to learn about CoreData.
@@ -96,6 +96,10 @@ I completed the first challenge and built a unit converting app that converts te
 
 **Day 15 - April 09, 2020:**
 I began project 2 of Hacking SwiftUI.
-We went ove a few more common views such as the Stacks, buttons, images, colors, and gradients.
+We went over a few more common views such as the Stacks, buttons, images, colors, and gradients.
 SwiftUI makes so many things so simple, but I'm afraid it will make other things incredibly difficult.
 I'm optmistic though.
+
+**Day 16 - April 12, 2020:**
+We built a far more complex app than we have done previously.
+This was good experience in styling and organizing the  views.

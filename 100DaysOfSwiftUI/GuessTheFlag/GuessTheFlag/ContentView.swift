@@ -10,18 +10,78 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var showAlert = false
+    @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
+    @State private var correctAnswer = Int.random(in: 0...2)
+    
+    @State private var showingScore = false
+    @State private var scoreTitle = ""
+    @State private var scoreMessage = ""
+    
+    @State private var score = 0
     
     var body: some View {
-        Button(action: {
-            self.showAlert = true
-        }) {
-            Text("Show alert")
+        ZStack {
+            
+            LinearGradient(gradient: Gradient(colors: [.blue, .black]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+            
+            VStack(spacing: 30) {
+                VStack {
+                    Text("Tap the flag of ")
+                        .foregroundColor(.white)
+                        .fontWeight(.bold)
+                    Text(countries[correctAnswer])
+                        .foregroundColor(.white)
+                        .font(.largeTitle)
+                        .fontWeight(.black)
+                }
+                
+                ForEach(0 ..< 3) { number in
+                    Button(action: {
+                        self.flagTapped(number)
+                    }) {
+                        Image(self.countries[number]).renderingMode(.original)
+                            .clipShape(Capsule())
+                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
+                            .shadow(color: .black, radius: 2)
+                    }
+                }
+                
+                Text("Current score: \(score)")
+                    .font(.callout)
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                
+                Spacer()
+            }
         }
-        .alert(isPresented: $showAlert) {
-            Alert(title: Text("Hello, SwiftUI."), message: Text("This is some detail message."), dismissButton: .default(Text("OK")))
+        .alert(isPresented: $showingScore) {
+            Alert(title: Text(scoreTitle), message: Text(scoreMessage), dismissButton: .default(Text("Continue")) {
+                    self.askQuestion()
+                })
         }
     }
+    
+    // Called when the flag is tapped to send an alert.
+    func flagTapped(_ number: Int) {
+        if number == correctAnswer {
+            scoreTitle = "Correct"
+            scoreMessage = "Your score is \(score)"
+            score += 1
+        } else {
+            scoreTitle = "Wrong"
+            scoreMessage = "Incorrect, that is the flag of \(countries[number]). Your score is \(score)"
+            score -= 1
+        }
+        showingScore = true
+    }
+    
+    
+    // Call to present a new flag to guess.
+    func askQuestion() {
+        countries.shuffle()
+        correctAnswer = Int.random(in: 0...2)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
