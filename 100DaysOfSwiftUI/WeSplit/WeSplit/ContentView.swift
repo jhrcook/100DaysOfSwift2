@@ -8,6 +8,26 @@
 
 import SwiftUI
 
+
+struct NoTipStyle: ViewModifier {
+    var tipPercentage: Int
+    
+    func body(content: Content) -> some View {
+        if (tipPercentage == 0) {
+            return content.foregroundColor(.red)
+        } else {
+            return content.foregroundColor(.black)
+        }
+    }
+}
+
+extension View {
+    func applyNoTipStyle(tipPercentage: Int) -> some View {
+        self.modifier(NoTipStyle(tipPercentage: tipPercentage))
+    }
+}
+
+
 struct ContentView: View {
     
     @State private var checkAmount = ""
@@ -52,10 +72,12 @@ struct ContentView: View {
                 
                 Section(header: Text("Total check")) {
                     Text("$\(totalCheck, specifier: "%.2f")")
+                    .applyNoTipStyle(tipPercentage: tipPercentages[tipPercentage])
                 }
                 
                 Section(header: Text("Amount per person")) {
                     Text("$\(totalPerPerson, specifier: "%.2f")")
+                    .applyNoTipStyle(tipPercentage: tipPercentages[tipPercentage])
                 }
             }
             .navigationBarTitle("WeSlit")

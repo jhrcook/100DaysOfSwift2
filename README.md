@@ -103,3 +103,10 @@ I'm optmistic though.
 **Day 16 - April 12, 2020:**
 We built a far more complex app than we have done previously.
 This was good experience in styling and organizing the  views.
+
+**Day 17 - April 13, 2020:**
+Today was a technical day in the 100 Days of SwiftUI series, so I learned a lot about the mechanics and basics of SwiftUI.
+A lot still doesn't make any sense, but this did clarify a lot about the structure of SwiftUI.
+
+**Day 18 - April 15, 2020:**
+After watching a bunch of technical videos yesterday, today's Hacking with Swift had us edit a few of the projects to add custom ViewModifiers and Views.

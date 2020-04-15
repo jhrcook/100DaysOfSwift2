@@ -8,6 +8,21 @@
 
 import SwiftUI
 
+
+struct FlagImage: View {
+    var country: String
+    
+    var body: some View {
+        Image(country)
+            .renderingMode(.original)
+            .clipShape(Capsule())
+            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
+            .shadow(color: .black, radius: 2)
+    }
+}
+
+
+
 struct ContentView: View {
     
     @State private var countries = ["Estonia", "France", "Germany", "Ireland", "Italy", "Nigeria", "Poland", "Russia", "Spain", "UK", "US"].shuffled()
@@ -39,10 +54,7 @@ struct ContentView: View {
                     Button(action: {
                         self.flagTapped(number)
                     }) {
-                        Image(self.countries[number]).renderingMode(.original)
-                            .clipShape(Capsule())
-                            .overlay(Capsule().stroke(Color.black, lineWidth: 1))
-                            .shadow(color: .black, radius: 2)
+                        FlagImage(country: self.countries[number])
                     }
                 }
                 
@@ -64,13 +76,13 @@ struct ContentView: View {
     // Called when the flag is tapped to send an alert.
     func flagTapped(_ number: Int) {
         if number == correctAnswer {
+            score += 1
             scoreTitle = "Correct"
             scoreMessage = "Your score is \(score)"
-            score += 1
         } else {
+            score -= 1
             scoreTitle = "Wrong"
             scoreMessage = "Incorrect, that is the flag of \(countries[number]). Your score is \(score)"
-            score -= 1
         }
         showingScore = true
     }
