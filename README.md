@@ -110,3 +110,6 @@ A lot still doesn't make any sense, but this did clarify a lot about the structu
 
 **Day 18 - April 15, 2020:**
 After watching a bunch of technical videos yesterday, today's Hacking with Swift had us edit a few of the projects to add custom ViewModifiers and Views.
+
+**Day 19 - April 16, 2020:**
+I attended (on Twitch) the Learn Swift Boston Meet-up where we learned about debugging an iOS app.
