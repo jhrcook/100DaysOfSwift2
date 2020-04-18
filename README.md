@@ -113,3 +113,7 @@ After watching a bunch of technical videos yesterday, today's Hacking with Swift
 
 **Day 19 - April 16, 2020:**
 I attended (on Twitch) the Learn Swift Boston Meet-up where we learned about debugging an iOS app.
+
+**Day 20 - April 17, 2020:**
+I began the challenge project after the first 3 projects for the 100 Days of SwiftUI.
+I have laid out most of the UI and now need to workout the actual game logic.
