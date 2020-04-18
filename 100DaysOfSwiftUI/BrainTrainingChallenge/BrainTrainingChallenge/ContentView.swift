@@ -8,14 +8,6 @@
 
 import SwiftUI
 
-extension Color {
-    static let MyPink = Color(hue: 3.0/255.0, saturation: 39.0/200.0, brightness: 1.0)
-    static let MyBlue = Color(hue: 208.0/255.0, saturation: 49.0/200.0, brightness: 1.0)
-    static let MyYellow = Color(hue: 64.0/255.0, saturation: 59.0/200.0, brightness: 1.0)
-    static let ButtonColor = Color(hue: 267.0/255.0, saturation: 48.0/100.0, brightness: 40.0/100.0)
-}
-
-
 struct TitleText: View {
     var text: String
     
@@ -28,31 +20,6 @@ struct TitleText: View {
 }
 
 
-struct GameButton: View {
-    var text: String
-    var imageName: String
-    var action: () -> Void
-    
-    var body: some View {
-        Button(action: {
-            self.action()
-        }, label: {
-            HStack {
-                Image(systemName: self.imageName)
-                    .font(.title)
-                    .foregroundColor(.white)
-                Text(self.text)
-                    .font(.title)
-                    .foregroundColor(.white)
-            }
-            .frame(minWidth: 100, maxWidth: .infinity)
-            .background(Color.ButtonColor)
-            .cornerRadius(40)
-            .padding(.horizontal, 10)
-        })
-    }
-}
-
 
 struct ContentView: View {
     
@@ -63,7 +30,8 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.MyPink, .MyBlue, .MyYellow]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+//            LinearGradient(gradient: Gradient(colors: [.MyPink, .MyBlue, .MyYellow]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all)
+            Color(red: 0.9, green: 0.9, blue: 0.9).edgesIgnoringSafeArea(.all)
             VStack(alignment: .center, spacing: 30) {
                 TitleText(text: "Score: \(playersScore)")
                 Spacer()
@@ -73,13 +41,14 @@ struct ContentView: View {
                     TitleText(text: "Rock")
                 }
                 Spacer()
-                HStack(spacing: 0) {
+                VStack(spacing: 40) {
                     ForEach(0 ..< gameOptions.count) { i in
-                        GameButton(text: self.gameOptions[i], imageName: self.optionImages[i]) {
+                        NeumorphicButton(label: self.gameOptions[i], action: {
                             print("Hello")
-                        }
+                        })
                     }
                 }
+                .padding(20)
             }
         }
     }
