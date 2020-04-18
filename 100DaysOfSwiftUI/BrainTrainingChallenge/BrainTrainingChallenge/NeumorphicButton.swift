@@ -21,9 +21,9 @@ struct NeumorphicButton: View {
                 self.action()
             }, label: {
                 Text(self.label)
-                    .font(.system(size: 20, weight: .semibold, design: .rounded))
+                    .font(.system(size: 30, weight: .semibold, design: .rounded))
                     .foregroundColor(Color(self.labelColor))
-                    .frame(width: 200, height: 60)
+                    .frame(width: 240, height: 80)
                     .background(
                         ZStack{
                             Color(self.buttonColor)
@@ -39,7 +39,7 @@ struct NeumorphicButton: View {
                 )
                     .clipShape(RoundedRectangle(cornerRadius: 20, style: .continuous))
                     .shadow(color: Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 0.5)), radius: 20, x: 20, y: 20)
-                    .shadow(color: Color(#colorLiteral(red: 1, green: 1, blue: 1, alpha: 0.5)), radius: 20, x: -20, y: -20)
+                    .shadow(color: Color(#colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 0.5)), radius: 20, x: -20, y: -20)
             })
         }
     }

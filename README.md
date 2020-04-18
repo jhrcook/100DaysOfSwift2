@@ -117,3 +117,6 @@ I attended (on Twitch) the Learn Swift Boston Meet-up where we learned about deb
 **Day 20 - April 17, 2020:**
 I began the challenge project after the first 3 projects for the 100 Days of SwiftUI.
 I have laid out most of the UI and now need to workout the actual game logic.
+
+**Day 21 - April 18, 2020:**
+I spent more time styling the app, mainly playing round with colors, stacks, spacing, etc.
