@@ -120,3 +120,6 @@ I have laid out most of the UI and now need to workout the actual game logic.
 
 **Day 21 - April 18, 2020:**
 I spent more time styling the app, mainly playing round with colors, stacks, spacing, etc.
+
+**Day 22 - April 19, 2020:**
+I spent more time playing around with design in SwiftUI and made some nice-looking neumorphic buttons!

@@ -16,6 +16,8 @@ extension Color {
     static let ButtonColor = Color(hue: 267.0/255.0, saturation: 48.0/100.0, brightness: 40.0/100.0)
     
     static let MyPurple = /*@START_MENU_TOKEN@*/Color(hue: 0.68, saturation: 0.598, brightness: 0.548)/*@END_MENU_TOKEN@*/
-//    static let MyDarkPurple = 
+    
+    static let offWhite = Color(red: 225 / 255, green: 225 / 255, blue: 235 / 255)
+    static let blueGray = Color(red: 25 / 255, green: 25 / 255, blue: 50 / 255)
     
 }

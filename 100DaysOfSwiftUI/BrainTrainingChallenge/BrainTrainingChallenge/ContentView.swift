@@ -9,6 +9,9 @@
 import SwiftUI
 
 
+let rectCornerRad: CGFloat = 20.0
+
+
 struct ScoreText: View {
     var text: String
     
@@ -32,6 +35,61 @@ struct TitleText: View {
 }
 
 
+extension LinearGradient {
+    init(_ colors: Color...) {
+        self.init(gradient: Gradient(colors: colors), startPoint: .topLeading, endPoint: .bottomTrailing)
+    }
+}
+
+
+struct NeumorphicButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(30)
+            .contentShape(RoundedRectangle(cornerRadius: rectCornerRad))
+            .background(
+                Group {
+                    if configuration.isPressed {
+                        RoundedRectangle(cornerRadius:rectCornerRad)
+                            .fill(Color.offWhite)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: rectCornerRad)
+                                    .stroke(Color.gray, lineWidth: 4)
+                                    .blur(radius: 4)
+                                    .offset(x: 2, y: 2)
+                                    .mask(
+                                    RoundedRectangle(cornerRadius: rectCornerRad)
+                                        .fill(LinearGradient(Color.black, Color.clear))
+                                    )
+                            )
+                    } else {
+                        RoundedRectangle(cornerRadius:rectCornerRad)
+                            .fill(Color.offWhite)
+                            .shadow(color: Color.black.opacity(0.2), radius: 10, x: 10, y: 10)
+                            .shadow(color: Color.white.opacity(0.7), radius: 10, x: -5, y: -5)
+                    }
+                }
+            )
+            .animation(.easeInOut(duration: 5))
+    }
+}
+
+
+struct ButtonText: View {
+    var label: String
+    
+    init(_ label: String) {
+        self.label = label
+    }
+    
+    var body: some View {
+        Text(self.label)
+            .font(.system(size: 30, weight: .regular, design: .rounded))
+            .foregroundColor(Color.blueGray)
+    }
+}
+
+
 
 struct ContentView: View {
     
@@ -42,55 +100,21 @@ struct ContentView: View {
     
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)), Color(#colorLiteral(red: 0.5843137503, green: 0.8235294223, blue: 0.4196078479, alpha: 1))]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
             
-            VStack(alignment: .center, spacing: 30) {
-                ZStack {
-                    LinearGradient(gradient: Gradient(colors: [.MyPurple, .purple]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                        .cornerRadius(30)
-                        .shadow(color: .black, radius: 20)
-                        .edgesIgnoringSafeArea(.all)
-                        
-                    VStack {
-                        
-                        Spacer()
-                        
-                        ScoreText(text: "Score: \(playersScore)")
-                        
-                        Spacer()
-                        
-                        ZStack{
-                            LinearGradient(gradient: Gradient(colors: [Color(#colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)), Color(#colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1))]), startPoint: .leading, endPoint: .trailing)
-                                .cornerRadius(30)
-                                .frame(width: 340, height: 70)
-                                .shadow(color: .black, radius: 20)
-                            HStack(spacing: 20) {
-                                TitleText(text: "Win")
-                                Text("against")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 20, weight: .semibold, design: .rounded))
-                                TitleText(text: "Rock")
-                            }
-                        }
-                        .padding(-35)
-                    }
+            Color.offWhite.edgesIgnoringSafeArea(.all)
+            
+            
+            VStack(spacing: 30) {
+                ForEach(0 ..< gameOptions.count) { i in
+                    Button(action: {
+                        print("Button tapped.")
+                    }, label: {
+                        ButtonText(self.gameOptions[i])
+                    })
+                    .buttonStyle(NeumorphicButtonStyle())
                 }
-                .frame(maxWidth: .infinity, maxHeight: 300)
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 10, trailing: 0))
-                
-                Spacer()
-                
-                VStack(spacing: 40) {
-                    ForEach(0 ..< gameOptions.count) { i in
-                        NeumorphicButton(label: self.gameOptions[i], action: {
-                            print("Hello")
-                        })
-                    }
-                }
-                
-                Spacer()
             }
+            
         }
         
     }
