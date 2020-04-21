@@ -19,7 +19,7 @@ struct ScoreText: View {
         Text(text)
             .bold()
             .font(.system(size: 70, weight: .semibold, design: .rounded))
-            .foregroundColor(.white)
+            .foregroundColor(.black)
     }
 }
 
@@ -29,7 +29,7 @@ struct TitleText: View {
     var body: some View {
         Text(text)
             .bold()
-            .font(.system(size: 40, weight: .bold, design: .rounded))
+            .font(.system(size: 38, weight: .bold, design: .rounded))
             .foregroundColor(.black)
     }
 }
@@ -93,9 +93,10 @@ struct ButtonText: View {
 
 struct ContentView: View {
     
-    var playersScore: Int = 0
+    @State private var playersScore: Int = 0
+    @State private var playerShouldWin: Bool = false
+    @State private var opponentChoice: Int = 0
     
-    var optionImages = ["aspectratio.fill", "paperclip.circle.fill", "scissors"]
     var gameOptions = ["Rock", "Paper", "Scissors"]
     
     var body: some View {
@@ -105,9 +106,21 @@ struct ContentView: View {
             
             
             VStack(spacing: 30) {
+                
+                ZStack {
+                    RoundedRectangle(cornerRadius: 15)
+                        .offset(x: 0, y: -50)
+                        .foregroundColor(.offWhite)
+                        .shadow(color: Color.black.opacity(0.20), radius: 10, x: 10, y: 10)
+                    VStack(spacing: 20) {
+                        ScoreText(text: "Score: \(playersScore)")
+                        TitleText(text: "\(playerShouldWin ? "Win" : "Lose") against \(gameOptions[opponentChoice])")
+                    }
+                }
+                
                 ForEach(0 ..< gameOptions.count) { i in
                     Button(action: {
-                        print("Button tapped.")
+                        self.playerTapped(i)
                     }, label: {
                         ButtonText(self.gameOptions[i])
                     })
@@ -117,6 +130,38 @@ struct ContentView: View {
             
         }
         
+    }
+    
+    
+    func makeGame() {
+        playerShouldWin = Bool.random()
+        opponentChoice = Int.random(in: 0 ..< gameOptions.count)
+    }
+    
+    
+    func playerTapped(_ selection: Int) {
+        print("Button tapped: \(selection).")
+        let playerWon = didPlayerWin(selection)
+        if playerWon == playerShouldWin {
+            playersScore += 1
+        } else {
+            playersScore -= 1
+        }
+        
+        makeGame()
+    }
+    
+    func didPlayerWin(_ selection: Int) -> Bool {
+        switch opponentChoice {
+        case 0:
+            return selection == 1
+        case 1:
+            return selection == 2
+        case 2:
+            return selection == 3
+        default:
+            fatalError("Unknown opponent choice...")
+        }
     }
 }
 
