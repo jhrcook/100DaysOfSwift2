@@ -127,3 +127,7 @@ I spent more time playing around with design in SwiftUI and made some nice-looki
 **Day 23 - April 21, 2020:**
 I finsihed up the milestone project BrainTrainingChallenge, it was pretty easy, I just spent a lot of time playing with SwiftUI design.
 I also started the next project where we are learning about new user input methods and are getting some experience with dates.
+
+**Day 24 - April 22, 2020:**
+I continued with the BetterSleep project where we trained and implemented a simple CoreML model using CreateML.
+The codegen is wonderful.
