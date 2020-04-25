@@ -131,3 +131,7 @@ I also started the next project where we are learning about new user input metho
 **Day 24 - April 22, 2020:**
 I continued with the BetterSleep project where we trained and implemented a simple CoreML model using CreateML.
 The codegen is wonderful.
+
+**Day 25 - April 24, 2020:**
+I wrapped up the BetterSleep project and began the WordScramble game app.
+This looks like it will provide a good intro to working with strings.
