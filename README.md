@@ -135,3 +135,7 @@ The codegen is wonderful.
 **Day 25 - April 24, 2020:**
 I wrapped up the BetterSleep project and began the WordScramble game app.
 This looks like it will provide a good intro to working with strings.
+
+**Day 26 - April 27, 2020:**
+We built the word scramble game.
+It was a bit more complicated, but nothing crazy.
