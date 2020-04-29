@@ -139,3 +139,7 @@ This looks like it will provide a good intro to working with strings.
 **Day 26 - April 27, 2020:**
 We built the word scramble game.
 It was a bit more complicated, but nothing crazy.
+
+**Day 27 - April 29, 2020:**
+I completed the wrap-up for the Scrambled game - it was nothing complicated.
+I then began the next project where we are focusing an animation in SwiftUI.
