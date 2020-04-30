@@ -143,3 +143,6 @@ It was a bit more complicated, but nothing crazy.
 **Day 27 - April 29, 2020:**
 I completed the wrap-up for the Scrambled game - it was nothing complicated.
 I then began the next project where we are focusing an animation in SwiftUI.
+
+**Day 28 - April 30, 2020:**
+Continued learning about animations, adding in gestures and transitions.

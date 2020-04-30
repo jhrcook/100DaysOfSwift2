@@ -14,6 +14,7 @@
 		847DA555245A387F00D71317 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847DA554245A387F00D71317 /* Preview Assets.xcassets */; };
 		847DA558245A387F00D71317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847DA556245A387F00D71317 /* LaunchScreen.storyboard */; };
 		847DA560245A3CD800D71317 /* ContextViewTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847DA55F245A3CD800D71317 /* ContextViewTwo.swift */; };
+		84D31894245B944D00708AFA /* ContextViewThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D31893245B944D00708AFA /* ContextViewThree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		847DA557245A387F00D71317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		847DA559245A387F00D71317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847DA55F245A3CD800D71317 /* ContextViewTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextViewTwo.swift; sourceTree = "<group>"; };
+		84D31893245B944D00708AFA /* ContextViewThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextViewThree.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				847DA54D245A387C00D71317 /* SceneDelegate.swift */,
 				847DA54F245A387C00D71317 /* ContentView.swift */,
 				847DA55F245A3CD800D71317 /* ContextViewTwo.swift */,
+				84D31893245B944D00708AFA /* ContextViewThree.swift */,
 				847DA551245A387F00D71317 /* Assets.xcassets */,
 				847DA556245A387F00D71317 /* LaunchScreen.storyboard */,
 				847DA559245A387F00D71317 /* Info.plist */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				847DA54C245A387C00D71317 /* AppDelegate.swift in Sources */,
+				84D31894245B944D00708AFA /* ContextViewThree.swift in Sources */,
 				847DA560245A3CD800D71317 /* ContextViewTwo.swift in Sources */,
 				847DA54E245A387C00D71317 /* SceneDelegate.swift in Sources */,
 				847DA550245A387C00D71317 /* ContentView.swift in Sources */,

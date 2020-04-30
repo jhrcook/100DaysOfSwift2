@@ -10,26 +10,29 @@ import SwiftUI
 
 struct ContextViewTwo: View {
     
-    @State private var animationAmount: CGFloat = 1.0
+    let letters = Array("Hello SwiftUI")
+    @State private var enabled = false
+    @State private var dragAmount = CGSize.zero
     
     var body: some View {
-        VStack {
-            Stepper("Scale amount", value: $animationAmount.animation(
-                Animation.easeInOut(duration: 0.3)
-                    .repeatCount(3, autoreverses: true)
-            ), in: 1...10)
-            
-            Spacer()
-            
-            Button("Tap Me") {
-                self.animationAmount += 1
+        HStack(spacing: 0) {
+            ForEach(0..<letters.count) { num in
+                Text(String(self.letters[num]))
+                    .padding(5)
+                    .font(.title)
+                    .background(self.enabled ? Color.blue : Color.red)
+                    .offset(self.dragAmount)
+                    .animation(Animation.default.delay(Double(num) / 20))
             }
-            .padding(40)
-            .background(Color.red)
-            .foregroundColor(Color.white)
-            .clipShape(Circle())
-            .scaleEffect(animationAmount)
         }
+        .gesture(
+            DragGesture()
+                .onChanged {self.dragAmount = $0.translation }
+                .onEnded { _ in
+                    self.dragAmount = .zero
+                    self.enabled.toggle()
+                }
+        )
     }
 }
 
