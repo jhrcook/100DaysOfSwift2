@@ -146,3 +146,7 @@ I then began the next project where we are focusing an animation in SwiftUI.
 
 **Day 28 - April 30, 2020:**
 Continued learning about animations, adding in gestures and transitions.
+
+**Day 29 - May 01, 2020:**
+I added some animations to the flag game from a few projects ago to wrap up the Animations project.
+I began the next project where we will learn about using multiple views and passing data between them.
