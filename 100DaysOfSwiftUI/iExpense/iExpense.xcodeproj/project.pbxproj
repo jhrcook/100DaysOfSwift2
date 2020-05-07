@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		841F83F42463818B00BA3FEA /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841F83F32463818B00BA3FEA /* AddView.swift */; };
 		849F0170245CF12700EE2BF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F016F245CF12700EE2BF6 /* AppDelegate.swift */; };
 		849F0172245CF12700EE2BF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0171245CF12700EE2BF6 /* SceneDelegate.swift */; };
 		849F0174245CF12700EE2BF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849F0173245CF12700EE2BF6 /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		841F83F32463818B00BA3FEA /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		849F016C245CF12700EE2BF6 /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849F016F245CF12700EE2BF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		849F0171245CF12700EE2BF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				849F016F245CF12700EE2BF6 /* AppDelegate.swift */,
 				849F0171245CF12700EE2BF6 /* SceneDelegate.swift */,
+				841F83F32463818B00BA3FEA /* AddView.swift */,
 				849F0173245CF12700EE2BF6 /* ContentView.swift */,
 				849F0175245CF12A00EE2BF6 /* Assets.xcassets */,
 				849F017A245CF12A00EE2BF6 /* LaunchScreen.storyboard */,
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				841F83F42463818B00BA3FEA /* AddView.swift in Sources */,
 				849F0170245CF12700EE2BF6 /* AppDelegate.swift in Sources */,
 				849F0172245CF12700EE2BF6 /* SceneDelegate.swift in Sources */,
 				849F0174245CF12700EE2BF6 /* ContentView.swift in Sources */,

@@ -153,3 +153,7 @@ I began the next project where we will learn about using multiple views and pass
 
 **Day 30 - May 03, 2020:**
 I finished the introduction to Project 7 were Paul introduced more SwiftUI property wrappers and UserDefaults/JSONEncoder.
+
+**Day 31 - May 06, 2020:**
+We learned how to show and hide views while passing data back and forth.
+Also, we practiced reading and writing information.
