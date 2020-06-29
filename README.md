@@ -157,3 +157,7 @@ I finished the introduction to Project 7 were Paul introduced more SwiftUI prope
 **Day 31 - May 06, 2020:**
 We learned how to show and hide views while passing data back and forth.
 Also, we practiced reading and writing information.
+
+**Day 32 - June 29, 2020:**
+I have picked up a little before where I left off by restarting Project 7.
+We covered showing and dismissing view, the ObservableObject property wrapper, and storing data using UserDefaults and Codable.

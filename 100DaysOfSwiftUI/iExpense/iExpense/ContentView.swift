@@ -2,82 +2,34 @@
 //  ContentView.swift
 //  iExpense
 //
-//  Created by Joshua on 5/1/20.
+//  Created by Joshua on 6/29/20.
 //  Copyright © 2020 Joshua Cook. All rights reserved.
 //
 
 import SwiftUI
 
 
-struct ExpenseItem: Identifiable, Codable {
-    let id = UUID()
-    let name: String
-    let type: String
-    let amount: Int
+struct CodableUser: Codable {
+    var firstName: String
+    var lastName: String
 }
-
-class Expenses: ObservableObject {
-    @Published var items = [ExpenseItem]() {
-        didSet {
-            let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(items) {
-                UserDefaults.standard.set(encoded, forKey: "Items")
-            }
-        }
-    }
-    
-    init() {
-        if let items = UserDefaults.standard.data(forKey: "Items") {
-            let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode([ExpenseItem].self, from: items) {
-                self.items = decoded
-                return
-            }
-        }
-        self.items = []
-    }
-}
-
 
 struct ContentView: View {
     
-    @ObservedObject var expenses = Expenses()
-    @State private var showingAddExpense = false
+    @State private var user = CodableUser(firstName: "Josh", lastName: "Cook")
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(expenses.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.name)
-                                .font(.headline)
-                            Text(item.type)
-                        }
-                        
-                        Spacer()
-                        
-                        Text("$\(item.amount)")
-                    }
+        VStack(spacing: 20.0) {
+            Button("Save User") {
+                // Instantiate an encoder object.
+                let encoder = JSONEncoder()
+                // Try to encode the data into a Data object.
+                if let data = try? encoder.encode(self.user) {
+                    // Save Data object to disk using UserDefaults.
+                    UserDefaults.standard.set(data, forKey: "UserData")
                 }
-                .onDelete(perform: removeItems)
-            }
-            .navigationBarTitle("iExpense")
-            .navigationBarItems(trailing:
-                Button(action: {
-                    self.showingAddExpense = true
-                }) {
-                    Image(systemName: "plus")
-                }
-            )
-                .sheet(isPresented: $showingAddExpense) {
-                    AddView(expenses: self.expenses)
             }
         }
-    }
-    
-    func removeItems(at offsets: IndexSet) {
-        expenses.items.remove(atOffsets: offsets)
     }
 }
 
