@@ -161,3 +161,6 @@ Also, we practiced reading and writing information.
 **Day 32 - June 29, 2020:**
 I have picked up a little before where I left off by restarting Project 7.
 We covered showing and dismissing view, the ObservableObject property wrapper, and storing data using UserDefaults and Codable.
+
+**Day 33 - June 30, 2020:**
+I played around with some animations and styling in SwiftUI and then finished the iExpenses project in 100 Days of SwiftUI.

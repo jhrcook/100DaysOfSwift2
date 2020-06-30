@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8437B9C624AB5765002AD427 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437B9C524AB5765002AD427 /* AddView.swift */; };
 		84999A6624A9F77A00F260BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84999A6524A9F77A00F260BA /* AppDelegate.swift */; };
 		84999A6824A9F77A00F260BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84999A6724A9F77A00F260BA /* SceneDelegate.swift */; };
 		84999A6A24A9F77A00F260BA /* ObservableObjectExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84999A6924A9F77A00F260BA /* ObservableObjectExample.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8437B9C524AB5765002AD427 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 		84999A6224A9F77A00F260BA /* iExpense.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iExpense.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84999A6524A9F77A00F260BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84999A6724A9F77A00F260BA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				84999A7B24A9FD1100F260BA /* OnDeleteExample.swift */,
 				84999A7D24A9FEDF00F260BA /* UserDefaultsExample.swift */,
 				84999A7F24AA00A500F260BA /* ContentView.swift */,
+				8437B9C524AB5765002AD427 /* AddView.swift */,
 				84999A6B24A9F77F00F260BA /* Assets.xcassets */,
 				84999A7024A9F77F00F260BA /* LaunchScreen.storyboard */,
 				84999A7324A9F77F00F260BA /* Info.plist */,
@@ -162,6 +165,7 @@
 				84999A7C24A9FD1100F260BA /* OnDeleteExample.swift in Sources */,
 				84999A8024AA00A500F260BA /* ContentView.swift in Sources */,
 				84999A7E24A9FEDF00F260BA /* UserDefaultsExample.swift in Sources */,
+				8437B9C624AB5765002AD427 /* AddView.swift in Sources */,
 				84999A6824A9F77A00F260BA /* SceneDelegate.swift in Sources */,
 				84999A7A24A9FAD400F260BA /* MultipleViewsExample.swift in Sources */,
 				84999A6A24A9F77A00F260BA /* ObservableObjectExample.swift in Sources */,
