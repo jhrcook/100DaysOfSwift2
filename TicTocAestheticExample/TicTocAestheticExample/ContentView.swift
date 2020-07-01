@@ -39,7 +39,7 @@ struct ContentView: View {
     var body: some View {
         ZStack {
             Color.black.edgesIgnoringSafeArea(.all)
-                Image(systemName: "trash")
+                Image(systemName: "sun.dust.fill")
                     .font(.system(size: 300, weight: .bold, design: .default))
                     .modifier(TikTokEffect(offset: CGSize(width: isOffSet ? -4 : 0, height: isOffSet ? -3 : 0)))
                     .onAppear {
