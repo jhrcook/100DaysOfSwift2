@@ -168,3 +168,7 @@ I played around with some animations and styling in SwiftUI and then finished th
 **Day 34 - July 01, 2020:**
 We began working on the Moonshot project, getting a lot of practice in decoding JSON.
 Paul demonstrated techniques for extending bundle with a decode function and formatting dates.
+
+**Day 35 - July 02, 2020:**
+Practiced using multiple views and passing data in SwiftUI.
+We also worked on some different types of standard view layouts.

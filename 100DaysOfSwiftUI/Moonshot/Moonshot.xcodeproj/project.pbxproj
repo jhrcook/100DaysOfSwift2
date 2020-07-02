@@ -22,6 +22,9 @@
 		8432C19B24ACA58800B1547B /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432C19A24ACA58800B1547B /* Astronaut.swift */; };
 		8432C19D24ACA60200B1547B /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432C19C24ACA60200B1547B /* Bundle-Decodable.swift */; };
 		8432C19F24ACA8BC00B1547B /* mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8432C19E24ACA8BC00B1547B /* mission.swift */; };
+		84E9F01324ADF33F00B7293D /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9F01224ADF33F00B7293D /* MissionView.swift */; };
+		84E9F01524ADFA1C00B7293D /* AstronautView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9F01424ADFA1C00B7293D /* AstronautView.swift */; };
+		84E9F01724ADFF2600B7293D /* MissionViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E9F01624ADFF2600B7293D /* MissionViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		8432C19A24ACA58800B1547B /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		8432C19C24ACA60200B1547B /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		8432C19E24ACA8BC00B1547B /* mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mission.swift; sourceTree = "<group>"; };
+		84E9F01224ADF33F00B7293D /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		84E9F01424ADFA1C00B7293D /* AstronautView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AstronautView.swift; sourceTree = "<group>"; };
+		84E9F01624ADFF2600B7293D /* MissionViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,9 @@
 				8432C19024ACA13600B1547B /* NavigationLinkIntro.swift */,
 				8432C19224ACA29400B1547B /* HierarchicalCodable.swift */,
 				8432C19424ACA40300B1547B /* ContentView.swift */,
+				84E9F01624ADFF2600B7293D /* MissionViewRow.swift */,
+				84E9F01424ADFA1C00B7293D /* AstronautView.swift */,
+				84E9F01224ADF33F00B7293D /* MissionView.swift */,
 				8432C19E24ACA8BC00B1547B /* mission.swift */,
 				8432C17824AC9BCC00B1547B /* AppDelegate.swift */,
 				8432C17A24AC9BCC00B1547B /* SceneDelegate.swift */,
@@ -178,12 +187,15 @@
 				8432C17924AC9BCC00B1547B /* AppDelegate.swift in Sources */,
 				8432C19124ACA13600B1547B /* NavigationLinkIntro.swift in Sources */,
 				8432C19524ACA40400B1547B /* ContentView.swift in Sources */,
+				84E9F01724ADFF2600B7293D /* MissionViewRow.swift in Sources */,
 				8432C19B24ACA58800B1547B /* Astronaut.swift in Sources */,
 				8432C19F24ACA8BC00B1547B /* mission.swift in Sources */,
 				8432C19324ACA29400B1547B /* HierarchicalCodable.swift in Sources */,
 				8432C19D24ACA60200B1547B /* Bundle-Decodable.swift in Sources */,
+				84E9F01324ADF33F00B7293D /* MissionView.swift in Sources */,
 				8432C17B24AC9BCC00B1547B /* SceneDelegate.swift in Sources */,
 				8432C18F24AC9E5A00B1547B /* ScrollViewIntro.swift in Sources */,
+				84E9F01524ADFA1C00B7293D /* AstronautView.swift in Sources */,
 				8432C17D24AC9BCC00B1547B /* GeometryReaderIntro.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
