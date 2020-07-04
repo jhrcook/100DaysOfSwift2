@@ -172,3 +172,6 @@ Paul demonstrated techniques for extending bundle with a decode function and for
 **Day 35 - July 02, 2020:**
 Practiced using multiple views and passing data in SwiftUI.
 We also worked on some different types of standard view layouts.
+
+**Day 36 - July 04, 2020:**
+We started a new project to learn about darwing with Path and Shape objects.
