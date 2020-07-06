@@ -175,3 +175,6 @@ We also worked on some different types of standard view layouts.
 
 **Day 36 - July 04, 2020:**
 We started a new project to learn about darwing with Path and Shape objects.
+
+**Day 37 - July 06, 2020:**
+We continued learning about Shapes and experimenting with AnimatableData.

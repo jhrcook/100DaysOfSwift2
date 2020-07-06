@@ -74,14 +74,56 @@ struct Flower: Shape {
     }
 }
 
+struct FilledCircle: View {
+    
+    let fillColor: Color
+    @Binding var amount: CGFloat
+    let offset: CGSize
+    
+    var body: some View {
+        Circle()
+            .fill(fillColor)
+            .frame(width: 200 * amount)
+            .offset(offset)
+            .blendMode(.screen)
+            .saturation(Double(amount))
+            .blur(radius: (1.0 - amount) * 20.0)
+    }
+}
+
+
+struct Trapezoid: Shape {
+    
+    var insetAmount: CGFloat
+    
+    var animatableData: CGFloat {
+        get { insetAmount }
+        set { self.insetAmount = newValue }
+    }
+    
+    func path(in rect: CGRect) -> Path {
+        var path = Path()
+        
+        path.move(to: CGPoint(x: 0, y: rect.maxY))
+        path.addLine(to: CGPoint(x: insetAmount, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX - insetAmount, y: rect.minY))
+        path.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        path.addLine(to: CGPoint(x: 0, y: rect.maxY))
+        
+        return path
+    }
+}
+
 
 struct ContentView: View {
     
-    @State private var petalOffset = -20.0
-    @State private var petalWidth = 100.0
+//    @State private var amount: CGFloat = 100.0
+//    @State private var petalOffset = -20.0
+//    @State private var petalWidth = 100.0
+    @State private var insetAmount: CGFloat = 50.0
     
     var body: some View {
-        VStack(spacing: 30) {
+//        VStack(spacing: 30) {
 //            Triangle()
 //                .stroke(Color.blue, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
 //                .padding()
@@ -90,17 +132,51 @@ struct ContentView: View {
 //            Arc(startAngle: .degrees(0), endAngle: .degrees(110), clockwise: true)
 //                .stroke(Color.blue, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
 //                .frame(width: 300, height: 300)
-            Flower(petalOffset: petalOffset, petalWidth: petalWidth)
-                .fill(Color.red, style: FillStyle(eoFill: true))
-            
-            Text("Offset")
-            Slider(value: $petalOffset, in: -40...40)
-                .padding()
-            
-            Text("Width")
-            Slider(value: $petalWidth, in: 0...100)
-                .padding()
+//        }
+//        VStack {
+//            Flower(petalOffset: petalOffset, petalWidth: petalWidth)
+//                .fill(Color.red, style: FillStyle(eoFill: true))
+//
+//            Text("Offset")
+//            Slider(value: $petalOffset, in: -40...40)
+//                .padding()
+//
+//            Text("Width")
+//            Slider(value: $petalWidth, in: 0...100)
+//                .padding()
+//        }
+        
+//        ZStack {
+//            Image("yan_chess")
+//            Rectangle()
+//                .fill(Color.red)
+//                .blendMode(.screen)
+//        }
+//        .frame(width: 400, height: 500)
+//        .clipped()
+        
+//        VStack {
+//            ZStack {
+//                FilledCircle(fillColor: .red, amount: $amount, offset: CGSize(width: -50, height: -80))
+//                FilledCircle(fillColor: .green, amount: $amount, offset: CGSize(width: 50, height: -80))
+//                FilledCircle(fillColor: .blue, amount: $amount, offset: CGSize(width: 0, height: 0))
+//            }
+//            .frame(width: 300, height: 300)
+//
+//            Slider(value: $amount).padding()
+//        }
+//        .frame(maxWidth: .infinity, maxHeight: .infinity)
+//        .background(Color.black)
+//        .edgesIgnoringSafeArea(.all)
+        
+        Trapezoid(insetAmount: insetAmount)
+            .frame(width: 200, height: 100)
+            .onTapGesture {
+                withAnimation {
+                    self.insetAmount = CGFloat.random(in: 10...90)
+                }
         }
+        
     }
 }
 
