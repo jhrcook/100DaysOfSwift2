@@ -178,3 +178,7 @@ We started a new project to learn about darwing with Path and Shape objects.
 
 **Day 37 - July 06, 2020:**
 We continued learning about Shapes and experimenting with AnimatableData.
+
+**Day 38 - July 07, 2020:**
+I took on the challenge following project 9 to build a HabitTracking app.
+There are a few bugs, but most of the functionality is there and working.
