@@ -182,3 +182,7 @@ We continued learning about Shapes and experimenting with AnimatableData.
 **Day 38 - July 07, 2020:**
 I took on the challenge following project 9 to build a HabitTracking app.
 There are a few bugs, but most of the functionality is there and working.
+
+**Day 39 - July 08, 2020:**
+We learned about how to make an @Published variable conform to codable.
+We also briefly learned about disabling a button based on some boolean statement.
