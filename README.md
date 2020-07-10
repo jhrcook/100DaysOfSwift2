@@ -189,3 +189,6 @@ We also briefly learned about disabling a button based on some boolean statement
 
 **Day 40 - July 09, 2020:**
 We created a more complex app with a more complex data type with multiple publishers.
+
+**Day 41 - July 10, 2020:**
+I worked on my own project in SwiftUI.
