@@ -192,3 +192,12 @@ We created a more complex app with a more complex data type with multiple publis
 
 **Day 41 - July 10, 2020:**
 I worked on my own project in SwiftUI.
+
+**Day 42 - July 11, 2020:**
+I worked on my own project in SwiftUI.
+
+**Day 43 - July 12, 2020:**
+I worked on my own project in SwiftUI.
+
+**Day 44 - July 13, 2020:**
+I worked on my own project in SwiftUI.
