@@ -201,3 +201,9 @@ I worked on my own project in SwiftUI.
 
 **Day 44 - July 13, 2020:**
 I worked on my own project in SwiftUI.
+
+**Day 45 - July 14, 2020:**
+I worked on my own project in SwiftUI.
+
+**Day 46 - July 15, 2020:**
+I worked on my own project in SwiftUI.
